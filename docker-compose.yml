@@ -2,12 +2,13 @@
 services:
   frontend:
     build:
-      context: ./frontend
+      context: ./vue-frontend
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+    restart: always
     volumes:
-      - ./frontend:/app
+      - ./vue-frontend:/app
       - /app/node_modules
     depends_on:
       - backend
