@@ -20,7 +20,9 @@ const messages = {
         app_description: 'Create a QR code for your WiFi network. Visitors can scan this code to connect instantly without typing a password.',
         share_title: 'WiFi QR Code',
         share_text: 'Scan this QR code to connect to WiFi',
-        share_not_supported: 'Sharing is not supported on this browser'
+        share_not_supported: 'Sharing is not supported on this browser',
+        copy: 'Copy QR!',
+        copied: 'QR copied to clipboard!'
       },
       menu: {
         home: 'Home',
@@ -48,7 +50,9 @@ const messages = {
         app_description: 'Erstellen Sie einen QR-Code für Ihr WLAN-Netzwerk. Besucher können diesen Code scannen, um sich sofort zu verbinden, ohne ein Passwort einzugeben.',
         share_title: 'WiFi QR Code',
         share_text: 'Scannen Sie diesen QR-Code, um sich mit dem WLAN zu verbinden',
-        share_not_supported: 'Das Teilen wird in diesem Browser nicht unterstützt'
+        share_not_supported: 'Das Teilen wird in diesem Browser nicht unterstützt',
+        copy: 'QR kopieren!',
+        copied: 'QR gekopieren!'
       },
       menu: {
         home: 'Home',

@@ -73,7 +73,8 @@
   
   button.active {
     opacity: 1;
-    background-color: #4CAF50;
+    color: white;
+    background-color: #4c224f;
   }
   
   button.active:hover {

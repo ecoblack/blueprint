@@ -4,8 +4,8 @@
       <header class="hero-section">
         <div class="hero-content">
           <div class="hero-text">
-            <h1>{{ $t('message.app_title') }}</h1>
-            <p class="intro">{{ $t('message.app_description') }}</p>
+            <h1>{{ headerText }}</h1>
+            <p class="intro">{{ introText }}</p>
           </div>
           <div class="hero-image">
             <img src="@/assets/logo.png" alt="WiFi QR Code illustration" />
@@ -37,6 +37,18 @@ export default {
     return {
       qrValue: '',
       loading: false
+    }
+  },
+  computed: {
+    headerText() {
+      return this.qrValue 
+        ? "Here's your code! 🎉" 
+        : this.$t('message.app_title')
+    },
+    introText() {
+      return this.qrValue 
+        ? "Scan this QR code to connect to the WiFi network" 
+        : this.$t('message.app_description')
     }
   },
   methods: {
@@ -80,14 +92,13 @@ export default {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .hero-section {
   flex: 1;
   background-color: #331333;
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Change from center to flex-start */
   justify-content: center;
   min-height: 50vh;
 }
@@ -122,13 +133,15 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.6; /* Adjust this value to make the image more or less visible */
+  object-position: top center; /* Add this line to position the image from the top */
+  opacity: 0.6;
 }
 
 
 .generator-section {
   flex: 1;
   background-color: #fff;
+  padding: 40px;
 }
 /* Headings */
 h1 {
