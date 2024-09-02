@@ -104,7 +104,6 @@ export default {
 }
 
 .hero-content {
-  position: relative;
   z-index: 2;
   padding: 40px;
   color: #fff;
@@ -243,7 +242,7 @@ button.secondary:hover:not(:disabled) {
   }
 
   .hero-section {
-    min-height: 40vh;
+    min-height: 30vh;
   }
 
   .hero-text {
@@ -252,7 +251,6 @@ button.secondary:hover:not(:disabled) {
 
   .generator-section {
     position: relative;
-    padding: 30px;
     border-radius: 20px 20px 0 0;
     z-index: 3;
     margin-top: -20px;

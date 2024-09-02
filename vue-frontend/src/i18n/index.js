@@ -22,7 +22,8 @@ const messages = {
         share_text: 'Scan this QR code to connect to WiFi',
         share_not_supported: 'Sharing is not supported on this browser',
         copy: 'Copy QR!',
-        copied: 'QR copied to clipboard!'
+        copied: 'QR copied to clipboard!',
+        file_format: 'File format:'
       },
       menu: {
         home: 'Home',
@@ -52,7 +53,8 @@ const messages = {
         share_text: 'Scannen Sie diesen QR-Code, um sich mit dem WLAN zu verbinden',
         share_not_supported: 'Das Teilen wird in diesem Browser nicht unterstützt',
         copy: 'QR kopieren!',
-        copied: 'QR gekopieren!'
+        copied: 'QR gekopieren!',
+        file_format: 'File format:'
       },
       menu: {
         home: 'Home',

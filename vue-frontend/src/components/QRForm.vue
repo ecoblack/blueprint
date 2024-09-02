@@ -30,21 +30,31 @@
         <option value="nopass">{{ $t('message.no_password') }}</option>
       </select>
     </div>
+
+    <div class="form-group">
+      <label>{{ $t('message.file_format') }}</label>
+      <FileFormatSelector @format-selected="updateFileFormat" />
+    </div>
     <button type="submit" :disabled="!isFormValid" :class="{ 'active': isFormValid }">{{ $t('message.generate') }}</button>
   </form>
 </template>
   
   <script>
-  export default {
-    name: 'QRForm',
+
+import FileFormatSelector from './FileFormatSelector.vue'
+
+export default {
+  name: 'QRForm',
+  components: {
+    FileFormatSelector
+  },
     data() {
       return {
-        ssid: '',
-        password: '',
-        encryption: 'WPA',
-        isFormValid: false
-      }
-    },
+      ssid: '',
+      password: '',
+      encryption: 'WPA',
+      fileFormat: 'SVG',
+    }},
     methods: {
       validateForm() {
         this.isFormValid = this.ssid.length > 0 && 
